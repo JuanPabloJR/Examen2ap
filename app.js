@@ -40,14 +40,14 @@
 let b1 = document.querySelector("#b11");
 let b2 = document.querySelector("#b22");
 
-let eventos = ["click", "mouseenter", "mouseleave", "mousemove"];
+let eventos = ["click", "mouseenter", "mouseleave", "mousemove", "load", "pause", "seeking", "resume", "keypress","select"];
 
 Dom("arr1", eventos);
 show(eventos);
 
 b1.addEventListener("click", () => {
     let input = document.querySelector("#ip").value;
-    eventos.push(input);
+    eventos.unshift(input);
     updateList("arr1", eventos);
 });
 
